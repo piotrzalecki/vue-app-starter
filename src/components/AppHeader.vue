@@ -19,10 +19,6 @@
           <li class="nav-item">
             <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link active" aria-current="page" to="/books">Books</router-link>
-          </li>
-
           <li v-if="store.token !== ''" class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="navBarDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
 
@@ -32,12 +28,6 @@
               </li>
               <li>
                 <router-link class="dropdown-item" to="/admin/users/0">Add User</router-link>
-              </li>
-              <li>
-                <router-link class="dropdown-item" to="/admin/books">Manage Books</router-link>
-              </li>
-              <li>
-                <router-link class="dropdown-item" :to="{name: 'BookEdit', params: {bookId:0}}">Add Book</router-link>
               </li>
             </ul>
 
